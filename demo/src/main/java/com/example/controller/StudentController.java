@@ -57,7 +57,7 @@ public class StudentController {
 	@GetMapping("/email")
 	public ResponseEntity<Boolean> isStudentValid(@RequestParam(name = "email") String email) {
 		boolean studentByEmail = studentService.getStudentByEmail(email);
-		return new ResponseEntity<Boolean>(studentByEmail, HttpStatus.OK);
+		return new ResponseEntity<Boolean>(studentByEmail, HttpStatus.BAD_REQUEST);
 	}
 	
 	
