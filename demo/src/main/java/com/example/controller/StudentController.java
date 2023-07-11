@@ -28,7 +28,7 @@ public class StudentController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Student> getStudent(@PathVariable("id") int id) {
 		Student student = studentService.getStudentById(id);
-		System.out.println("Hello ");
+		System.out.println("Hello Atul");
 		return new ResponseEntity<Student>(student, HttpStatus.OK);
 	}
 
